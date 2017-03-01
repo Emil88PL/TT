@@ -19,10 +19,10 @@ if (mysqli_connect_errno())
 mysqli_select_db($con,"members");
 
 $sql= "INSERT INTO users (username,email,school) VALUES ('$_POST[name]','$_POST[email]','$select')";
-	
+$sql2= "INSERT INTO schools (schoolname) VALUES ('$select')";	
 
 mysqli_query($con,$sql);
-
+mysqli_query($con,$sql2);
 mysqli_close($con);
 
 header('Location: index.php');
