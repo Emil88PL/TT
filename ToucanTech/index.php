@@ -29,9 +29,26 @@ session_start();
 			<option value="school1" >School1</option>
 			<option value="school2" >School2</option>
 		</select>
-		<input type="submit" class="btn btn-secondary btn-sm" name="Submit"/>				
+		<input type="submit" class="btn btn-secondary btn-sm" name="Submit"/>
+		<input type="button" class="btn btn-secondary btn-sm" onclick="addschool()" value="Add school"/>				
 	</form>
+
+	<script>
+		function addschool(){
+	var option = document.createElement("option");
+	option.text = prompt("Name of school: ");
+	option.value = option.text.toLowerCase();
+	var select = document.getElementById("schools");
+	select.appendChild(option);
+}		
+	</script>
 	
+
+
+
+
+
+
 	<hr/>
 	<br/>
 
