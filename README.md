@@ -7,5 +7,12 @@ While choosing School you can see who is in that School.
 
 (You have to create in 127.0.0.1/phpmyadmin database named 'members' and import 'users.php' table.)
 
+
+UPDATE soon:
+
+-Schools table,
+-Adding new school.
+
+
 Warmest Regards 
 Emil Kotlowski
