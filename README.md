@@ -8,10 +8,12 @@ While choosing School you can see who is in that School.
 (You have to create in 127.0.0.1/phpmyadmin database named 'members' and import 'users.php' table.)
 
 
-UPDATE:
-
-Schools table,Adding new school to the new table.
-
-
+<ul>UPDATE:
+<li>Schools table,</li><br/>
+<li>Adding new school to the new table.</li>
+</ul>
+<ul>UPDATE soon: <br/>
+<li>Download select from database.</li>
+</ul>
 Warmest Regards 
 Emil Kotlowski
