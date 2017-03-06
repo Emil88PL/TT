@@ -1,5 +1,9 @@
 <?php
-session_start();
+session_start();		
+require_once "connect.php";
+	$con = mysqli_connect($host,$db_user,$db_password,$db_name);
+	$rez = mysqli_query($con,"SELECT schoolname FROM schools ORDER BY idschools ASC ")  or die(mysql_error()."[".$rez."]");
+			
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,13 +28,29 @@ session_start();
 		Email Address:<br/>
 		<input type="email" name="email" placeholder="Type in your Email Address" size="28" required><br/>
 		School:<br/>
-		<select name="schools" id="schools" required>
-			<option value="" >Select...</option>
-			<option value="school1" >School1</option>
-			<option value="school2" >School2</option>
-		</select>
+			
+
+				<select name="schools" id="schools">
+				<?php 
+				while ($row = mysqli_fetch_array($rez))
+				{
+				    echo "<option value='".$row['schoolname']."'>".$row['schoolname']."</option>";
+				}
+				?>        
+				</select>
 		<input type="submit" class="btn btn-secondary btn-sm" name="Submit"/>
-		<input type="button" class="btn btn-secondary btn-sm" onclick="addschool()" value="Add school"/>				
+		<input type="button" class="btn btn-secondary btn-sm" onclick="addschool()" value="Add school"/>
+			
+			<br/>
+			<br/>
+
+
+			<br/> 
+
+</select>
+
+
+
 	</form>
 
 	<script>
