@@ -15,7 +15,7 @@ UPDATE:
 </ul>
 UPDATE soon:
 <ul>
-<li>Table from selected school.</li>
+<li>Show Table from selected school.</li>
 </ul>
 Warmest Regards 
 Emil Kotlowski
